@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(to right, rgb(144, 132, 223), rgb(165, 203, 121));
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+}
+
+.jason {
+    display: flex;
+}
+
+.jason img {
+    max-width: 100%;
+}
+
+.profile {
+    border-radius: 120px;
+    width: 140px;
+    height: 140px;
+    margin-right: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 90px;
+}
+
+.cards {
+    display: grid;
+    grid-template-rows: max-content 200px 1fr;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 100%;
+    border-radius: 5px;
+    padding: 2px 16px 20px;
+}
+
+.cards img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bouton {
+    padding: 10px 25px;
+    border: 2px solid;
+    width: fit-content;
+    height: 40px;
+    cursor: pointer;
+    border-style: none;
+    background-color: #ff3838;
+    color:#fff;
+    font-size: 15px;
+    outline: none;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.4);
+    transition: all .5s ease-in-out;
+}
+
+.bouton:hover {
+    transform: scale(.95) translateX(-5px);
+    transition: all .5s ease-in-out;
+}
