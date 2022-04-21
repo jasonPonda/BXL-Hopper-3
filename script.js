@@ -6,6 +6,7 @@ const collection = [
         age: 41,
         taille: 186,
         pays: "Angletterre",
+        link: "https://www.youtube.com/watch?v=W-XZPUEFhPw"
     },
 
     {
@@ -14,7 +15,8 @@ const collection = [
         club: "Légende",
         age: 44,
         taille: 188,
-        pays: "Côte d'Ivoire"
+        pays: "Côte d'Ivoire",
+        link: "https://www.youtube.com/watch?v=ZWYGRehfmR4"
     },
 
     {
@@ -23,7 +25,8 @@ const collection = [
         club: "Légende",
         age: 41,
         taille: 176,
-        pays: "Angletterre"
+        pays: "Angletterre",
+        link: "https://www.youtube.com/watch?v=xt5AkuZzuAQ"
     },
 
     {
@@ -32,7 +35,8 @@ const collection = [
         club: "Légende",
         age: 43,
         taille: 184,
-        pays: "Angletterre"
+        pays: "Angletterre",
+        link: "https://www.youtube.com/watch?v=cSYGVnhEkR4"
     },
 
     {
@@ -41,7 +45,8 @@ const collection = [
         club: "Légende",
         age: 42,
         taille: 182,
-        pays: "Brésil"
+        pays: "Brésil",
+        link: "https://www.youtube.com/watch?v=_dBz4dTZocg"
     },
 
     {
@@ -50,7 +55,8 @@ const collection = [
         image: 'images/cristiano.jpg',
         age: 37,
         taille: 187,
-        pays: "Portugal"
+        pays: "Portugal",
+        link: "https://www.youtube.com/watch?v=OUKGsb8CpF8"
     },
 
     {
@@ -59,7 +65,8 @@ const collection = [
         image: 'images/messi.jpg',
         age: 34,
         taille: 169,
-        pays: "Argentine"
+        pays: "Argentine",
+        link: "https://www.youtube.com/watch?v=p693u53Q10U"
     },
 
     {
@@ -68,16 +75,18 @@ const collection = [
         club: "Bayern Munich",
         age: 33,
         taille: 185,
-        pays: "Pologne"
+        pays: "Pologne",
+        link: "https://www.youtube.com/watch?v=5A1wwIdptEU"
     },
 
     {
         nom: "Karim Benzema",
         image: 'images/karim.jpg',
         club: "Réal Madrid",
-        age: 34,
+        age: 35,
         taille: 185,
-        pays: "France"
+        pays: "France",
+        link: "https://www.youtube.com/watch?v=RgkpdcD3VOc"
     },
 
     {
@@ -86,11 +95,12 @@ const collection = [
         club: "Paris Saint-Germain",
         age: 23,
         taille: 178,
-        pays: "France"
+        pays: "France",
+        link: "https://www.youtube.com/watch?v=omlWuLD5SXk"
     }
 ]
 
-const image = [
+/*const image = [
     'images/terry.jpg',
     'images/drogba.jpg',
     'images/ashley-cole.jpg',
@@ -102,7 +112,35 @@ const image = [
     'images/karim.jpg',
     'images/kylian.jpg'
 
-]
+]*/
+
+
+const header = document.querySelector('header')
+const div = document.createElement('div')
+div.className = "jason"
+
+const imageH = document.createElement('img')
+imageH.src = "images/ponda.jpg"
+imageH.className = "profile"
+
+const div1 = document.createElement('div')
+const h1 = document.createElement('h1')
+h1.innerText = "Jason Ponda's Collection"
+const par1 = document.createElement('p')
+par1.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quos nemo ab. Hic quiarecusandae ea? Dolor, eaque! Doloremque dolorum est voluptatum commodi tenetur harum consectetur dolorem ad autem. Ea."
+const par2 = document.createElement('p')
+par2.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis debitis voluptas minus iste adipisci cum eum, vel magnam, aperiam possimus expedita est, magni ipsa sint ex assumenda temporibus aliquid rerum?"
+
+const div2 = document.createElement('div')
+div2.id = 'btn'
+const button = document.createElement('button')
+
+header.appendChild(div)
+div.appendChild(imageH)
+div.appendChild(div1)
+div1.appendChild(h1)
+div1.appendChild(par1)
+div1.appendChild(par2)
 
 const section = document.querySelector('section')
 
@@ -121,16 +159,39 @@ for (const fifa of collection) {
     const img = new Image(200, 200)
     img.src = fifa.image
 
-    const para = document.createElement('p')
-    para.innerText = fifa.club
-    para.innerText = fifa.age
-    para.innerText = fifa.taille
-    para.innerText = fifa.pays
+    const para1 = document.createElement('p')
+    para1.innerText = fifa.club
+    
+    const para2 = document.createElement('p')
+    para2.innerText = fifa.age
+
+    const para3 = document.createElement('p')
+    para3.innerText = fifa.taille
+
+    const para4 = document.createElement('p')
+    para4.innerText = fifa.pays
+
+    const a = document.createElement('a')
+    a.href = fifa.link
+    a.className = "bouton"
+
+    const link = document.createTextNode("Play trailer on YouTube")
+    
+    const i = document.createElement('i')
+    i.className = "fab fa-youtube fa-spin"
+
 
     section.appendChild(article)
     article.appendChild(img)
-    article.appendChild(title)
-    article.appendChild(para)
+    article.appendChild(unDiv)
+    unDiv.appendChild(title)
+    unDiv.appendChild(para1)
+    unDiv.appendChild(para2)
+    unDiv.appendChild(para3)
+    unDiv.appendChild(para4)
+    unDiv.appendChild(a)
+    a.appendChild(i)
+    a.appendChild(link)
     
 }
 
