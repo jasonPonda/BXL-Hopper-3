@@ -124,6 +124,25 @@ const collection = [
 
 ]*/
 
+const para = document.querySelector('p');
+const input = document.querySelector('input');
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', () => {
+  const searchName = input.value.toLowerCase();
+  input.value = '';
+  input.focus();
+  para.textContent = '';
+  for (const contact of collection) {
+    if(searchName === contact.nom){
+      return collection
+    }
+  }
+  if (para.textContent === '') {
+   para.textContent = 'Contact not found.';
+ }
+});
+
 
 const header = document.querySelector('header')
 const div = document.createElement('div')
